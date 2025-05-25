@@ -4,20 +4,178 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LEEDHub - Your LEED Certification Command Center</title>
-    <!-- ... existing code ... -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Include styles.css content directly */
+        :root {
+            --primary-color: #2E6F40;
+            --secondary-color: #4A8B5C;
+            --accent-color: #1D4D2B;
+            --background-color: #F5F9F5;
+            --text-color: #333333;
+            --sidebar-width: 250px;
+            --header-height: 70px;
+            --card-shadow: 0 4px 6px rgba(46, 111, 64, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .app-container {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        .sidebar {
+            width: var(--sidebar-width);
+            background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 20px;
+            position: fixed;
+            height: 100vh;
+            overflow-y: auto;
+        }
+
+        .sidebar-header {
+            text-align: center;
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .logo {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 15px;
+            display: block;
+        }
+
+        .nav-links {
+            list-style: none;
+            margin-top: 30px;
+        }
+
+        .nav-links li {
+            margin-bottom: 10px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            padding: 12px 15px;
+            display: flex;
+            align-items: center;
+            border-radius: 8px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-links i {
+            margin-right: 10px;
+        }
+
+        .main-content {
+            flex: 1;
+            margin-left: var(--sidebar-width);
+            padding: 20px;
+        }
+
+        .content-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: var(--card-shadow);
+        }
+
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: var(--card-shadow);
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 15px;
+        }
+
+        .activity-list {
+            list-style: none;
+        }
+
+        .activity-list li {
+            display: flex;
+            align-items: center;
+            padding: 15px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .quick-actions {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+        }
+
+        .action-btn {
+            background-color: var(--accent-color);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 70px;
+            }
+            .main-content {
+                margin-left: 70px;
+            }
+        }
+    </style>
 </head>
-<body class="eco-theme">
+<body>
     <div class="app-container">
-        <!-- Sidebar Navigation -->
         <nav class="sidebar">
             <div class="sidebar-header">
                 <img src="images/logo.svg" alt="LEEDHub Logo" class="logo">
                 <h1>LEEDHub</h1>
             </div>
-            <!-- ... existing code ... -->
+            <ul class="nav-links">
+                <li><a href="index.html" class="active"><i class="fas fa-home"></i>Dashboard</a></li>
+                <li><a href="registration.html"><i class="fas fa-plus-circle"></i>New Registration</a></li>
+                <li><a href="projects.html"><i class="fas fa-building"></i>Projects</a></li>
+                <li><a href="guide.html"><i class="fas fa-book"></i>LEED Guide</a></li>
+                <li><a href="certification.html"><i class="fas fa-certificate"></i>Certification Assistant</a></li>
+                <li><a href="documents.html"><i class="fas fa-file-alt"></i>Documents</a></li>
+            </ul>
         </nav>
 
-        <!-- Main Content -->
         <main class="main-content">
             <header class="content-header">
                 <h2>Dashboard</h2>
@@ -28,7 +186,6 @@
             </header>
 
             <div class="dashboard-grid">
-                <!-- Project Summary Card -->
                 <div class="card">
                     <h3>Project Summary</h3>
                     <div class="stats">
@@ -47,7 +204,6 @@
                     </div>
                 </div>
 
-                <!-- Recent Activities -->
                 <div class="card">
                     <h3>Recent Activities</h3>
                     <ul class="activity-list">
@@ -68,7 +224,6 @@
                     </ul>
                 </div>
 
-                <!-- Quick Actions -->
                 <div class="card">
                     <h3>Quick Actions</h3>
                     <div class="quick-actions">
@@ -80,12 +235,5 @@
             </div>
         </main>
     </div>
-
-    <script src="js/config.js"></script>
-    <script src="js/utils.js"></script>
-    <script src="js/templates.js"></script>
-    <script src="js/navigation.js"></script>
-    <script src="js/forms.js"></script>
-    <script src="js/app.js"></script>
 </body>
 </html>
