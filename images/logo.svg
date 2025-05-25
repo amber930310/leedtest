@@ -1,0 +1,11 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+    <style>
+        .leaf { fill: #2E6F40; }
+        .circle { fill: none; stroke: #2E6F40; stroke-width: 8; }
+        .text { fill: #2E6F40; font-family: Arial, sans-serif; font-weight: bold; }
+    </style>
+    <circle cx="100" cy="100" r="90" class="circle"/>
+    <path class="leaf" d="M100 50 C140 50, 160 90, 160 130 C160 150, 150 170, 130 180 C110 190, 90 190, 70 180 C50 170, 40 150, 40 130 C40 90, 60 50, 100 50 Z"/>
+    <path class="leaf" d="M100 70 L100 150 M70 110 L130 110" stroke="white" stroke-width="8"/>
+    <text x="60" y="40" class="text" font-size="24">LEED v5</text>
+</svg>
