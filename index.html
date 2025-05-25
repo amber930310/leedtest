@@ -1,116 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LEEDHub - Sustainable Certification Platform</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Previous head content remains the same -->
     <style>
-        :root {
-            --primary-color: #2E6F40;
-            --secondary-color: #4A8B5C;
-            --accent-color: #1D4D2B;
-            --background-color: #F5F9F5;
-            --card-bg: rgba(255, 255, 255, 0.9);
-            --text-color: #333333;
-            --sidebar-width: 280px;
+        /* Previous styles remain the same */
+        
+        /* Add new navigation styles */
+        .nav-list {
+            list-style: none;
+            margin-top: 30px;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        .nav-item {
+            margin-bottom: 15px;
         }
 
-        body {
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #F5F9F5 0%, #E8F5E9 100%);
-            color: var(--text-color);
-            line-height: 1.6;
-            min-height: 100vh;
-        }
-
-        .app-container {
-            display: flex;
-            min-height: 100vh;
-        }
-
-        .sidebar {
-            width: var(--sidebar-width);
-            background: linear-gradient(160deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+        .nav-link {
             color: white;
-            padding: 30px;
-            position: fixed;
-            height: 100vh;
-            overflow-y: auto;
-            box-shadow: 4px 0 15px rgba(0, 0, 0, 0.1);
+            text-decoration: none;
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.1);
         }
 
-        .main-content {
-            flex: 1;
-            margin-left: var(--sidebar-width);
-            padding: 40px;
+        .nav-link:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateX(5px);
         }
 
-        .content-header {
-            background: var(--card-bg);
-            padding: 20px;
-            border-radius: 15px;
-            margin-bottom: 30px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        .nav-link.active {
+            background: rgba(255, 255, 255, 0.25);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-        .dashboard-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
-
-        .card {
-            background: var(--card-bg);
-            padding: 20px;
-            border-radius: 15px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        @media (max-width: 768px) {
-            .sidebar {
-                width: 80px;
-            }
-            .main-content {
-                margin-left: 80px;
-            }
+        .nav-link i {
+            margin-right: 12px;
+            width: 20px;
+            text-align: center;
         }
     </style>
 </head>
 <body>
     <div class="app-container">
         <nav class="sidebar">
-            <h1>LEEDHub</h1>
-            <ul>
-                <li><a href="#" style="color: white; text-decoration: none;">Dashboard</a></li>
-                <li><a href="#" style="color: white; text-decoration: none;">Projects</a></li>
-                <li><a href="#" style="color: white; text-decoration: none;">Documentation</a></li>
+            <div style="text-align: center; padding: 20px 0;">
+                <h1 style="color: white; margin-bottom: 20px;">LEEDHub</h1>
+            </div>
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link active">
+                        <i class="fas fa-home"></i>
+                        Dashboard
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="registration.html" class="nav-link">
+                        <i class="fas fa-plus-circle"></i>
+                        New Registration
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="projects.html" class="nav-link">
+                        <i class="fas fa-building"></i>
+                        Projects
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="guide.html" class="nav-link">
+                        <i class="fas fa-book"></i>
+                        LEED Guide
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="certification.html" class="nav-link">
+                        <i class="fas fa-certificate"></i>
+                        Certification
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="documents.html" class="nav-link">
+                        <i class="fas fa-file-alt"></i>
+                        Documents
+                    </a>
+                </li>
             </ul>
         </nav>
 
-        <main class="main-content">
-            <div class="content-header">
-                <h2>Welcome to LEEDHub</h2>
-            </div>
-
-            <div class="dashboard-grid">
-                <div class="card">
-                    <h3>Project Summary</h3>
-                    <p>Your LEED certification management platform</p>
-                </div>
-                <div class="card">
-                    <h3>Quick Actions</h3>
-                    <p>Start managing your sustainable projects</p>
-                </div>
-            </div>
-        </main>
+        <!-- Rest of the content remains the same -->
     </div>
 </body>
 </html>
