@@ -1,5 +1,8 @@
 // Configuration settings
 const CONFIG = {
+    appName: 'LEEDHub',
+    appDescription: 'Your LEED Certification Command Center',
+
     // API endpoints
     apiEndpoints: {
         projects: '/api/projects',
