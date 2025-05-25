@@ -1,6 +1,8 @@
 // Main application logic
+
 class App {
     constructor() {
+        document.title = `${CONFIG.appName} - ${CONFIG.appDescription}`;
         this.initializeApp();
         this.formHandler = new FormHandler();
     }
