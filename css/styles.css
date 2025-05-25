@@ -1,13 +1,13 @@
 /* Base Styles */
 :root {
-    --primary-color: #2E7D32;
-    --secondary-color: #81C784;
-    --accent-color: #4CAF50;
+    --primary-color: #2E6F40;
+    --secondary-color: #4A8B5C;
+    --accent-color: #1D4D2B;
     --background-color: #F5F9F5;
     --text-color: #333333;
     --sidebar-width: 250px;
     --header-height: 70px;
-    --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --card-shadow: 0 4px 6px rgba(46, 111, 64, 0.1);
 }
 
 * {
