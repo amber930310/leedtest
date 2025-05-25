@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEEDHub - Document Management</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Include all previous styles */
+        
+        /* Document-specific styles */
+        .documents-container {
+            background: var(--card-bg);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .upload-zone {
+            border: 2px dashed var(--primary-color);
+            border-radius: 10px;
+            padding: 40px;
+            text-align: center;
+            margin-bottom: 30px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .upload-zone:hover {
+            background-color: rgba(46, 111, 64, 0.05);
+        }
+
+        .document-list {
+            list-style: none;
+        }
+
+        .document-item {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }
+
+        .document-item:hover {
+            background-color: rgba(46, 111, 64, 0.05);
+        }
+
+        .document-icon {
+            font-size: 24px;
+            margin-right: 15px;
+            color: var(--primary-color);
+        }
+
+        .document-info {
+            flex: 1;
+        }
+
+        .document-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .document-action {
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            color: white;
+            background: var(--primary-color);
+        }
+
+        .document-categories {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .category-filter {
+            padding: 8px 15px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            background: white;
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+
+        .category-filter.active {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .search-bar {
+            margin-bottom: 20px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .search-input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Same sidebar as index.html -->
+        <nav class="sidebar">
+            <!-- Copy the entire sidebar content from index.html -->
+        </nav>
+
+        <main class="main-content">
+            <div class="content-header">
+                <h2>Document Management</h2>
+            </div>
+
+            <div class="documents-container">
+                <div class="search-bar">
+                    <input type="text" class="search-input" placeholder="Search documents...">
+                </div>
+
+                <div class="document-categories">
+                    <button class="category-filter active">All Documents</button>
+                    <button class="category-filter">Energy Reports</button>
+                    <button class="category-filter">Water Management</button>
+                    <button class="category-filter">Certifications</button>
+                    <button class="category-filter">Site Plans</button>
+                </div>
+
+                <div class="upload-zone">
+                    <i class="fas fa-cloud-upload-alt" style="font-size: 48px; color: var(--primary-color);"></i>
+                    <h3>Drag and Drop Files Here</h3>
+                    <p>or click to browse</p>
+                </div>
+
+                <ul class="document-list">
+                    <li class="document-item">
+                        <i class="fas fa-file-pdf document-icon"></i>
+                        <div class="document-info">
+                            <h4>Energy Performance Report</h4>
+                            <span>Uploaded: 2024-01-15</span>
+                        </div>
+                        <div class="document-actions">
+                            <button class="document-action">View</button>
+                            <button class="document-action">Download</button>
+                            <button class="document-action">Delete</button>
+                        </div>
+                    </li>
+                    <li class="document-item">
+                        <i class="fas fa-file-excel document-icon"></i>
+                        <div class="document-info">
+                            <h4>Water Usage Data</h4>
+                            <span>Uploaded: 2024-01-10</span>
+                        </div>
+                        <div class="document-actions">
+                            <button class="document-action">View</button>
+                            <button class="document-action">Download</button>
+                            <button class="document-action">Delete</button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
