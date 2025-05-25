@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEEDHub - Certification Assistant</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Include all previous styles */
+        
+        /* Certification-specific styles */
+        .certification-container {
+            background: var(--card-bg);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .progress-tracker {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 40px;
+            position: relative;
+            padding-top: 30px;
+        }
+
+        .progress-step {
+            flex: 1;
+            text-align: center;
+            position: relative;
+        }
+
+        .progress-step::before {
+            content: '';
+            width: 30px;
+            height: 30px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            position: absolute;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .progress-step::after {
+            content: '';
+            height: 3px;
+            background: var(--primary-color);
+            position: absolute;
+            top: -15px;
+            width: 100%;
+            left: 50%;
+        }
+
+        .checklist-section {
+            margin-bottom: 30px;
+        }
+
+        .checklist-item {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .checklist-item input[type="checkbox"] {
+            margin-right: 15px;
+            width: 20px;
+            height: 20px;
+        }
+
+        .points-calculator {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .category-score {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+        }
+
+        .total-score {
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--primary-color);
+            text-align: center;
+            margin-top: 20px;
+            padding: 20px;
+            border-top: 2px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .certification-level {
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Same sidebar as index.html -->
+        <nav class="sidebar">
+            <!-- Copy the entire sidebar content from index.html -->
+        </nav>
+
+        <main class="main-content">
+            <div class="content-header">
+                <h2>Certification Assistant</h2>
+            </div>
+
+            <div class="certification-container">
+                <div class="progress-tracker">
+                    <div class="progress-step">Documentation</div>
+                    <div class="progress-step">Verification</div>
+                    <div class="progress-step">Review</div>
+                    <div class="progress-step">Certification</div>
+                </div>
+
+                <div class="checklist-section">
+                    <h3>Prerequisites Checklist</h3>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="prereq1">
+                        <label for="prereq1">Minimum Energy Performance</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="prereq2">
+                        <label for="prereq2">Water Use Reduction</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="prereq3">
+                        <label for="prereq3">Construction Waste Management</label>
+                    </div>
+                </div>
+
+                <div class="points-calculator">
+                    <h3>Points Calculator</h3>
+                    <div class="category-score">
+                        <span>Location & Transportation</span>
+                        <span>15/32 points</span>
+                    </div>
+                    <div class="category-score">
+                        <span>Sustainable Sites</span>
+                        <span>10/26 points</span>
+                    </div>
+                    <div class="category-score">
+                        <span>Water Efficiency</span>
+                        <span>8/15 points</span>
+                    </div>
+                    <div class="category-score">
+                        <span>Energy & Atmosphere</span>
+                        <span>20/33 points</span>
+                    </div>
+
+                    <div class="total-score">
+                        Total Score: 53/110
+                    </div>
+
+                    <div class="certification-level">
+                        <h3>Projected Certification Level</h3>
+                        <p>SILVER</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
