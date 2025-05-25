@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEEDHub - LEED Guide</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Include all previous styles */
+        
+        /* Guide-specific styles */
+        .guide-container {
+            background: var(--card-bg);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .guide-section {
+            margin-bottom: 30px;
+        }
+
+        .guide-section h3 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        .criteria-list {
+            list-style: none;
+        }
+
+        .criteria-item {
+            padding: 15px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .criteria-item:last-child {
+            border-bottom: none;
+        }
+
+        .points-badge {
+            display: inline-block;
+            padding: 5px 10px;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 15px;
+            font-size: 14px;
+            margin-left: 10px;
+        }
+
+        .category-tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            overflow-x: auto;
+            padding-bottom: 10px;
+        }
+
+        .category-tab {
+            padding: 10px 20px;
+            background: white;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            white-space: nowrap;
+        }
+
+        .category-tab.active {
+            background: var(--primary-color);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Same sidebar as index.html -->
+        <nav class="sidebar">
+            <!-- Copy the entire sidebar content from index.html -->
+        </nav>
+
+        <main class="main-content">
+            <div class="content-header">
+                <h2>LEED v5 Guide</h2>
+            </div>
+
+            <div class="category-tabs">
+                <button class="category-tab active">Overview</button>
+                <button class="category-tab">Location & Transportation</button>
+                <button class="category-tab">Sustainable Sites</button>
+                <button class="category-tab">Water Efficiency</button>
+                <button class="category-tab">Energy & Atmosphere</button>
+                <button class="category-tab">Materials & Resources</button>
+            </div>
+
+            <div class="guide-container">
+                <div class="guide-section">
+                    <h3>LEED v5 Overview</h3>
+                    <p>LEED v5 is the latest version of the world's leading green building rating system...</p>
+                </div>
+
+                <div class="guide-section">
+                    <h3>Certification Levels</h3>
+                    <ul class="criteria-list">
+                        <li class="criteria-item">
+                            Certified <span class="points-badge">40-49 points</span>
+                        </li>
+                        <li class="criteria-item">
+                            Silver <span class="points-badge">50-59 points</span>
+                        </li>
+                        <li class="criteria-item">
+                            Gold <span class="points-badge">60-79 points</span>
+                        </li>
+                        <li class="criteria-item">
+                            Platinum <span class="points-badge">80+ points</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
