@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEED v5 Certification Platform</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+    <div class="min-h-screen bg-sage-50" id="app">
+        <!-- Header -->
+        <header class="bg-gradient-to-r from-green-700 to-green-600 fixed w-full z-10">
+            <div class="container mx-auto px-6 py-4">
+                <div class="flex justify-between items-center">
+                    <div class="flex items-center space-x-3">
+                        <svg class="w-8 h-8 text-green-100" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12a8 8 0 01-8 8m0-16a8 8 0 018 8m-8 0a8 8 0 00-8 8m8-16a8 8 0 00-8 8m16 0h.01M12 20h.01M12 4h.01M4 12h.01"/>
+                        </svg>
+                        <h1 class="text-2xl font-bold text-white">LEED v5 Certification Assistant</h1>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <button class="px-4 py-2 bg-white/20 text-white rounded-full hover:bg-white/30 transition-colors">
+                            Documentation
+                        </button>
+                        <button class="px-4 py-2 bg-white text-green-700 rounded-full hover:bg-green-50 transition-colors language-switcher">
+                            🌍 English
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content Area -->
+        <div class="flex">
+            <!-- Sidebar Navigation -->
+            <aside class="w-64 bg-white h-screen fixed top-16 left-0 shadow-soft">
+                <nav class="p-6 space-y-2" id="main-nav">
+                    <!-- Navigation Links -->
+                    <a href="#dashboard" class="nav-link active" data-page="dashboard">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+                        </svg>
+                        <span>Dashboard</span>
+                    </a>
+                    <a href="#register" class="nav-link" data-page="register">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
+                        </svg>
+                        <span>Register Building</span>
+                    </a>
+                    <a href="#guide" class="nav-link" data-page="guide">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
+                        </svg>
+                        <span>LEED v5 Guide</span>
+                    </a>
+                    <a href="#assistant" class="nav-link" data-page="assistant">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                        </svg>
+                        <span>Certification Assistant</span>
+                    </a>
+                    <a href="#management" class="nav-link" data-page="management">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
+                        </svg>
+                        <span>Project Management</span>
+                    </a>
+                </nav>
+            </aside>
+
+            <!-- Main Content -->
+            <main class="ml-64 pt-16 flex-1 p-8" id="main-content">
+                <!-- Default Dashboard Content -->
+                <div class="space-y-6">
+                    <!-- Overview Stats -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="bg-white rounded-xl p-6 shadow-soft">
+                            <div class="flex items-center justify-between mb-4">
+                                <h3 class="text-lg font-semibold text-green-800">Total Projects</h3>
+                                <span class="text-2xl text-green-600">12</span>
+                            </div>
+                            <div class="w-full bg-green-100 rounded-full h-2">
+                                <div class="bg-green-500 h-2 rounded-full" style="width: 75%"></div>
+                            </div>
+                        </div>
+
+                        <div class="bg-white rounded-xl p-6 shadow-soft">
+                            <div class="flex items-center justify-between mb-4">
+                                <h3 class="text-lg font-semibold text-green-800">Active Certifications</h3>
+                                <span class="text-2xl text-green-600">8</span>
+                            </div>
+                            <div class="w-full bg-green-100 rounded-full h-2">
+                                <div class="bg-green-500 h-2 rounded-full" style="width: 60%"></div>
+                            </div>
+                        </div>
+
+                        <div class="bg-white rounded-xl p-6 shadow-soft">
+                            <div class="flex items-center justify-between mb-4">
+                                <h3 class="text-lg font-semibold text-green-800">Completed</h3>
+                                <span class="text-2xl text-green-600">4</span>
+                            </div>
+                            <div class="w-full bg-green-100 rounded-full h-2">
+                                <div class="bg-green-500 h-2 rounded-full" style="width: 40%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Recent Projects Table -->
+                    <div class="bg-white rounded-xl shadow-soft">
+                        <div class="p-6 border-b border-gray-200">
+                            <h2 class="text-xl font-semibold text-green-800">Recent Projects</h2>
+                        </div>
+                        <div class="overflow-x-auto">
+                            <table class="w-full">
+                                <thead>
+                                    <tr class="bg-gray-50">
+                                        <th class="text-left p-4 font-semibold text-gray-600">Project Name</th>
+                                        <th class="text-left p-4 font-semibold text-gray-600">Location</th>
+                                        <th class="text-left p-4 font-semibold text-gray-600">Status</th>
+                                        <th class="text-left p-4 font-semibold text-gray-600">Progress</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="border-t border-gray-200 hover:bg-gray-50">
+                                        <td class="p-4">Majestic Bronte Large</td>
+                                        <td class="p-4">See Progress</td>
+                                        <td class="p-4">
+                                            <span class="px-2 py-1 bg-green-100 text-green-800 rounded-full text-sm">
+                                                In Progress
+                                            </span>
+                                        </td>
+                                        <td class="p-4">
+                                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                                <div class="bg-green-500 h-2 rounded-full" style="width: 75%"></div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Loading Indicator -->
+    <div id="loading" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+        <div class="bg-white p-4 rounded-lg shadow-lg">
+            <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-green-600"></div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/config.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/templates.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/forms.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
